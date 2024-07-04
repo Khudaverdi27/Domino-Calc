@@ -6,10 +6,10 @@ function App() {
   const [userVals, setUserVals] = useState([0, 0, 0, 0]);
   const [history, setHistory] = useState([[], [], [], []]);
   const dropZones = [
-    { left: 0, top: 53, width: 180, height: 50, playerIndex: 0 },
-    { left: 0, top: 122, width: 180, height: 50, playerIndex: 1 },
-    { left: 0, top: 192, width: 180, height: 50, playerIndex: 2 },
-    { left: 0, top: 262, width: 180, height: 50, playerIndex: 3 },
+    { left: 4, top: 53, width: 180, height: 50, playerIndex: 0 },
+    { left: 4, top: 122, width: 180, height: 50, playerIndex: 1 },
+    { left: 4, top: 192, width: 180, height: 50, playerIndex: 2 },
+    { left: 4, top: 262, width: 180, height: 50, playerIndex: 3 },
   ];
 
   const handleStop = (value, playerIndex) => {
@@ -50,8 +50,8 @@ function App() {
           }}
         />
       ))}
-      <p className="mt-3 text-sm">
-        Rəqəmin üzərinə klik et və daha sonra sürüklə!
+      <p className="mt-3 ml-1 text-sm ">
+        Rəqəmin üzərinə klik et və çıxan rəqəmi sürüklə!
       </p>
     </main>
   );
