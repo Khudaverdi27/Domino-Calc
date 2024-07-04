@@ -31,7 +31,7 @@ function Points({ handleStop, dropZones }) {
 
   return (
     <div className="bg-gradient-to-r from-purple-500 to-pink-500">
-      <div className="flex space-x-3  p-1 ml-10">
+      <div className="flex justify-around p-1 ">
         {numbers.map((number, index) => (
           <div
             key={index}
