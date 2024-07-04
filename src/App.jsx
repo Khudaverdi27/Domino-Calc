@@ -6,10 +6,10 @@ function App() {
   const [userVals, setUserVals] = useState([0, 0, 0, 0]);
   const [history, setHistory] = useState([[], [], [], []]);
   const dropZones = [
-    { left: 4, top: 53, width: 180, height: 50, playerIndex: 0 },
-    { left: 4, top: 122, width: 180, height: 50, playerIndex: 1 },
-    { left: 4, top: 192, width: 180, height: 50, playerIndex: 2 },
-    { left: 4, top: 262, width: 180, height: 50, playerIndex: 3 },
+    { left: 4, top: 105, width: 180, height: 60, playerIndex: 0 },
+    { left: 4, top: 175, width: 180, height: 60, playerIndex: 1 },
+    { left: 4, top: 245, width: 180, height: 60, playerIndex: 2 },
+    { left: 4, top: 315, width: 180, height: 60, playerIndex: 3 },
   ];
 
   const handleStop = (value, playerIndex) => {
@@ -35,6 +35,9 @@ function App() {
 
   return (
     <main className="relative">
+      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-2xl text-center p-3 font-mono text-white font-bold">
+        Domino Calculator
+      </div>
       <Points handleStop={handleStop} dropZones={dropZones} />
       <Users userVals={userVals} onDelete={handleDelete} />
       {dropZones.map((zone, index) => (

@@ -30,13 +30,13 @@ function Points({ handleStop, dropZones }) {
   };
 
   return (
-    <div className="bg-slate-400">
-      <div className="flex space-x-3  p-1 ml-12">
+    <div className="bg-gradient-to-r from-purple-500 to-pink-500">
+      <div className="flex space-x-3  p-1 ml-10">
         {numbers.map((number, index) => (
           <div
             key={index}
             ref={(el) => (refs.current[index] = el)}
-            className="border border-gray-500 p-2 rounded-md text-white size-10 text-center cursor-pointer"
+            className="border border-blue-700 p-2 rounded-md text-white size-10 text-center cursor-pointer font-bold"
             onClick={() => startDrag(index)}
             onMouseUp={() => setDragging(false)}
             onTouchStart={() => startDrag(index)}
@@ -48,7 +48,7 @@ function Points({ handleStop, dropZones }) {
       </div>
       {dragging && (
         <Draggable onStop={stopDrag}>
-          <div className="border border-gray-500 p-2 text-white size-10 text-center absolute top-1 left-0 bg-red-500 rounded-full">
+          <div className="border border-indigo-500 p-2 text-white size-12 text-center absolute top-0 left-0 bg-red-500 rounded-full font-bold text-2xl">
             {draggingText}
           </div>
         </Draggable>
