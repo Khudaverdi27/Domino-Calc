@@ -6,12 +6,10 @@ function Points({ handleStop, dropZones }) {
   const refs = useRef([]);
   const [dragging, setDragging] = useState(false);
   const [draggingText, setDraggingText] = useState("");
-  const [draggingIndex, setDraggingIndex] = useState(null);
 
   const startDrag = (index) => {
     setDragging(true);
     setDraggingText(refs.current[index].textContent);
-    setDraggingIndex(index);
   };
 
   const stopDrag = (e, data) => {
@@ -36,7 +34,7 @@ function Points({ handleStop, dropZones }) {
           <div
             key={index}
             ref={(el) => (refs.current[index] = el)}
-            className="border border-blue-700 p-2 rounded-md text-white size-10 text-center cursor-pointer font-bold"
+            className=" shadow-2xl bg-white  p-2 rounded-md text-gray-600 size-10 text-center cursor-pointer font-bold"
             onClick={() => startDrag(index)}
             onMouseUp={() => setDragging(false)}
             onTouchStart={() => startDrag(index)}
@@ -48,7 +46,10 @@ function Points({ handleStop, dropZones }) {
       </div>
       {dragging && (
         <Draggable onStop={stopDrag}>
-          <div className="border border-indigo-500 p-2 text-white size-12 text-center absolute top-0 left-0 bg-red-500 rounded-full font-bold text-2xl">
+          <div
+            className="border border-indigo-500 p-2 text-white size-12 text-center 
+          absolute top-0 left-0 bg-red-500 rounded-full font-bold text-2xl z-10"
+          >
             {draggingText}
           </div>
         </Draggable>
