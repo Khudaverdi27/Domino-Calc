@@ -50,6 +50,9 @@ function App() {
           }}
         />
       ))}
+      <p className="mt-3 text-sm">
+        Rəqəmin üzərinə klik et və daha sonra sürüklə!
+      </p>
     </main>
   );
 }
