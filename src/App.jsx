@@ -24,11 +24,12 @@ function App() {
 
   const handleDelete = (playerIndex) => {
     const newHistory = [...history];
+
     const removedValue = newHistory[playerIndex].pop();
     setHistory(newHistory);
 
     const newUserVals = [...userVals];
-    newUserVals[playerIndex] -= removedValue;
+    newUserVals[playerIndex] -= removedValue || 0;
     setUserVals(newUserVals);
   };
 
