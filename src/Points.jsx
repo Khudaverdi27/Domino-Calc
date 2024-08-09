@@ -47,7 +47,7 @@ function Points({ handleStop, dropZones }) {
       {dragging && (
         <Draggable onStop={stopDrag}>
           <div
-            className="border border-indigo-500 p-2 text-white size-12 text-center 
+            className="border cursor-pointer border-indigo-500 p-2 text-white size-14 text-center 
           absolute top-0 left-0 bg-red-500 rounded-full font-bold text-2xl z-10"
           >
             {draggingText}
